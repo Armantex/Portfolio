@@ -1,5 +1,8 @@
 ---
-
+import '../styles/globals.css'
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import MainNav from "@/components/mainNav"
 ---
 
 <html lang="en">
@@ -8,9 +11,16 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
+		<title>Portafolio</title>
+	</head> 
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<MainNav />
+			<nav>
+				<Button variant="outline">Button</Button>
+			</nav>
+			<h1>Armando Escobar</h1>
+			<h2>Programador</h2>
+		</main>
 	</body>
 </html>
