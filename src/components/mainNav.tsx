@@ -2,23 +2,28 @@ import react from "react";
 import { siteConfig } from "@/config/site";
 import { Icons } from "./icons";
 export default function mainNav() {
+  let sizeIcon = "h-8 w-8";
   return (
-    <nav className="md:container">
-      <div className="flex space-x-2">
-        <div className="flex bg-slate-500">h</div>
-        <div className="flex grow bg-slate-500 justify-center">
-            <a href="#">Home</a>
-        </div>
-        <div className="flex bg-slate-500">
-          <a href={siteConfig.links.github}>
-            <Icons.gitHub className="h-6 w-6" />
-          </a>
-          <a href={siteConfig.links.whatsapp}>
-            <Icons.whatsapp className="h-6 w-6" />
-          </a>
-          <a href={siteConfig.links.curriculum}>
-            <Icons.curriculum className="h-6 w-6" />
-          </a>
+    <nav className="backdrop-blur-md bg-black/40 w-screen absolute text-white">
+      <div className="md:container">
+        <div className="flex space-x-2 p-1">
+          <div className="flex">
+            <a href="#" className="text-xl">
+              Home
+            </a>
+          </div>
+          <div className="flex grow justify-center"></div>
+          <div className="flex gap-2">
+            <a href={siteConfig.links.github}>
+              <Icons.gitHub className={sizeIcon} />
+            </a>
+            <a href={siteConfig.links.whatsapp}>
+              <Icons.whatsapp className={sizeIcon} />
+            </a>
+            <a href={siteConfig.links.curriculum}>
+              <Icons.curriculum className={sizeIcon} />
+            </a>
+          </div>
         </div>
       </div>
     </nav>
