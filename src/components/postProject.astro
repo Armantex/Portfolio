@@ -1,0 +1,27 @@
+---
+const { frontmatter} = Astro.props;
+
+const { title, description, category } = frontmatter;
+---
+
+<article class="card">
+  <small>
+    <a class="badge">{category}</a>
+  </small>
+  <a>{title}</a>
+	<a aria-hidden="true" tabindex="-1">
+    <!-- <Image -->
+    <!--   src={image.src} -->
+    <!--   alt={image.alt} -->
+    <!--   width="400" -->
+    <!--   height="250" -->
+    <!--   format="webp" -->
+    <!--   fit="cover" -->
+    <!--   quality={80} -->
+    <!--   aspectRatio="4:1" -->
+    <!-- /> -->
+  </a>
+  <div class="content">
+    <p>{description}</p>
+  </div>
+</article>
