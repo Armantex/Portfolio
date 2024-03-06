@@ -1,27 +1,21 @@
 ---
+import { Icons } from "./icons";
 const { frontmatter} = Astro.props;
-
-const { title, description, category } = frontmatter;
+const { title, description, category, urlGithub } = frontmatter;
 ---
 
-<article class="card">
-  <small>
-    <a class="badge">{category}</a>
-  </small>
-  <a>{title}</a>
-	<a aria-hidden="true" tabindex="-1">
-    <!-- <Image -->
-    <!--   src={image.src} -->
-    <!--   alt={image.alt} -->
-    <!--   width="400" -->
-    <!--   height="250" -->
-    <!--   format="webp" -->
-    <!--   fit="cover" -->
-    <!--   quality={80} -->
-    <!--   aspectRatio="4:1" -->
-    <!-- /> -->
-  </a>
+<article class="flex flex-col bg-red-600">
+  <div class="flex">
+		<a class="badge">{category}</a>
+		<a href={urlGithub}>
+			<Icons.gitHub className="h-6 w-6"/>
+		</a>
+	</div>
+  <a href={urlGithub}>{title}</a>	
   <div class="content">
     <p>{description}</p>
   </div>
+	<div> 
+		more info
+	</div>
 </article>

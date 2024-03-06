@@ -1,0 +1,39 @@
+---
+import { siteConfig } from "@/config/site";
+import { Icons } from "./icons";
+
+const sizeIcon = "h-8 w-8";
+const hover = "hover:text-slate-400";
+const hoverIcon = "hover:text-slate-400"; 
+---
+
+
+<nav class="backdrop-blur-md bg-black/40 w-screen absolute text-white">
+	<div class="md:container">
+		<div class="flex space-x-2 p-1.5">
+			<div class="flex items-center text-xl font-bold gap-x-3">
+				<a href="/" class={hover}>
+					Home
+				</a>
+				<a href="/projects" class={hover}>
+					Projects
+				</a>
+				<a href="/contacts" class={hover}>
+					contacts
+				</a>
+			</div>
+		<div class="flex grow justify-center"></div>
+			<div class="flex gap-x-3">
+				<a href={siteConfig.links.github}>
+					<Icons.gitHub className={sizeIcon} />
+				</a>
+				<a href={siteConfig.links.whatsapp}>
+					<Icons.whatsapp className={sizeIcon} />
+				</a>
+				<a href={siteConfig.links.curriculum}>
+					<Icons.curriculum className={sizeIcon} />
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
