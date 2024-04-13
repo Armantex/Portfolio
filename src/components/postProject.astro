@@ -1,21 +1,21 @@
 ---
 import { Icons } from "./icons";
-const { frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 const { title, description, category, urlGithub } = frontmatter;
+import { DialogProject } from "./dialogProject";
 ---
 
 <article class="flex flex-col bg-red-600">
   <div class="flex">
-		<a class="badge">{category}</a>
-		<a href={urlGithub}>
-			<Icons.gitHub className="h-6 w-6"/>
-		</a>
-	</div>
-  <a href={urlGithub}>{title}</a>	
+    k
+    <a class="badge">{category}</a>
+    <a href={urlGithub}>
+      <Icons.gitHub className="h-6 w-6" />
+    </a>
+  </div>
+  <a href={urlGithub}>{title}</a>
   <div class="content">
     <p>{description}</p>
+    <DialogProject client:load />
   </div>
-	<div> 
-		more info
-	</div>
 </article>

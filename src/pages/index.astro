@@ -1,14 +1,42 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro"
+import MainLayout from "@/layouts/MainLayout.astro";
+import lang from "@/lang/es.json";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
 ---
 
-
 <MainLayout title="Portafolio">
-	<div class="flex flex-col h-screen justify-center bg-fixed bg-image bg-no-repeat bg-cover">
-		<div class="text-center text-white">
-			<h1 class="font-bold text-6xl">Armando Escobar</h1>
-			<h1 class="mt-4 text-4xl">Programmer</h1>
-		</div>				
-	</div>
+  <section
+    id="Name"
+    class="flex flex-col h-screen justify-center bg-fixed bg-image bg-no-repeat bg-cover"
+  >
+    <div class="text-center text-white">
+      <h1 class="font-bold text-6xl">Armando Escobar</h1>
+      <h1 class="mt-4 text-4xl">Programmer</h1>
+    </div>
+  </section>
+  <section id="Skills">
+    <h1>{lang.skills}:</h1>
+    <Badge>React</Badge>
+    <Badge>Java</Badge>
+    <Badge>JavaScript</Badge>
+    <Badge>HTML</Badge>
+    <Badge>CSS</Badge>
+    <Badge>Git</Badge>
+    <Badge>Spring Boot</Badge>
+  </section>
+  <section id="Learning">
+    <h1>{lang.startingLearn}:</h1>
+    <Badge>Rust</Badge>
+    <Badge>Astro</Badge>
+  </section>
+  <section id="email">
+    <h1>{lang.contacts}</h1>
+    <div class="flex w-full max-w-sm items-center space-x-2">
+      <Input type="email" placeholder="Email" />
+      <Button type="submit">{lang.send}</Button>
+      <Button type="submit">{lang.copy}</Button>
+    </div>
+  </section>
 </MainLayout>
-
