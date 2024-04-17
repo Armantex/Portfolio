@@ -14,33 +14,15 @@ import { Label } from "@/components/ui/label";
 export function DialogProject() {
 	return (
 		<Dialog>
-			<DialogTrigger asChild>
-				<Button variant="outline">More Info</Button>
-			</DialogTrigger>
-			<DialogContent className="sm:max-w-[425px]">
+			<DialogTrigger>Info</DialogTrigger>
+			<DialogContent>
 				<DialogHeader>
-					<DialogTitle>Edit profile</DialogTitle>
+					<DialogTitle>Are you absolutely sure?</DialogTitle>
 					<DialogDescription>
-						Make changes to your profile here. Click save when you're done.
+						This action cannot be undone. This will permanently delete your
+						account and remove your data from our servers.
 					</DialogDescription>
 				</DialogHeader>
-				<div className="grid gap-4 py-4">
-					<div className="grid grid-cols-4 items-center gap-4">
-						<Label htmlFor="name" className="text-right">
-							Name
-						</Label>
-						<Input id="name" value="Pedro Duarte" className="col-span-3" />
-					</div>
-					<div className="grid grid-cols-4 items-center gap-4">
-						<Label htmlFor="username" className="text-right">
-							Username
-						</Label>
-						<Input id="username" value="@peduarte" className="col-span-3" />
-					</div>
-				</div>
-				<DialogFooter>
-					<Button type="submit">Save changes</Button>
-				</DialogFooter>
 			</DialogContent>
 		</Dialog>
 	);

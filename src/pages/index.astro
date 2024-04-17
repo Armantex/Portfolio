@@ -16,27 +16,35 @@ import { Badge } from "@/components/ui/badge";
       <h1 class="mt-4 text-4xl">Programmer</h1>
     </div>
   </section>
-  <section id="Skills">
-    <h1>{lang.skills}:</h1>
-    <Badge>React</Badge>
-    <Badge>Java</Badge>
-    <Badge>JavaScript</Badge>
-    <Badge>HTML</Badge>
-    <Badge>CSS</Badge>
-    <Badge>Git</Badge>
-    <Badge>Spring Boot</Badge>
-  </section>
-  <section id="Learning">
-    <h1>{lang.startingLearn}:</h1>
-    <Badge>Rust</Badge>
-    <Badge>Astro</Badge>
-  </section>
-  <section id="email">
-    <h1>{lang.contacts}</h1>
-    <div class="flex w-full max-w-sm items-center space-x-2">
-      <Input type="email" placeholder="Email" />
-      <Button type="submit">{lang.send}</Button>
-      <Button type="submit">{lang.copy}</Button>
-    </div>
-  </section>
+  <div class="md:container">
+    <section id="Skills">
+      <h1 class="text-center text-2xl">{lang.skills}:</h1>
+      <div class="flex justify-center">
+        <Badge>React</Badge>
+        <Badge>Java</Badge>
+        <Badge>JavaScript</Badge>
+        <Badge>HTML</Badge>
+        <Badge>CSS</Badge>
+        <Badge>Git</Badge>
+        <Badge>Spring Boot</Badge>
+      </div>
+    </section>
+    <section id="Learning">
+      <h1 class="text-center text-2xl">{lang.startingLearn}:</h1>
+      <div class="flex justify-center">
+        <Badge>Rust</Badge>
+        <Badge>Astro</Badge>
+      </div>
+    </section>
+    <section id="email">
+      <h1 class="text-center text-2xl">{lang.contacts}</h1>
+      <div class="flex justify-center">
+        <div class="flex max-w-sm space-x-2">
+          <Input type="email" placeholder="Email" />
+          <Button type="submit">{lang.send}</Button>
+          <Button type="submit">{lang.copy}</Button>
+        </div>
+      </div>
+    </section>
+  </div>
 </MainLayout>
