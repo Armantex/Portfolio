@@ -1,8 +1,8 @@
 ---
-import { Icons } from "./icons";
 const { frontmatter } = Astro.props;
-const { title, description, category, urlGithub } = frontmatter;
+const { title, description, category, urlGithub, info } = frontmatter;
 import { DialogProject } from "./dialogProject";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 ---
 
-<article class="flex flex-col bg-red-600">
+<article class="flex flex-col">
   <Card>
     <CardHeader>
       <CardTitle className="text-xl">{title}</CardTitle>
@@ -22,7 +22,10 @@ import {
       <p>{description}</p>
     </CardContent>
     <CardFooter>
-      <DialogProject client:load />
+      <div class="w-full flex justify-between px-4">
+        <DialogProject info={info} program={title} client:load />
+        <Button><a href={urlGithub} target="_blank">Link</a></Button>
+      </div>
     </CardFooter>
   </Card>
 </article>

@@ -5,7 +5,8 @@ image: {
   src: " ",
   alt: " ",
 }
-urlGithub: /
-description: description
+urlGithub: https://github.com/argonarch/Cajero-Salado
+description: Gestiona tus ventas de manera sensilla
 category: category
+info:
 ---

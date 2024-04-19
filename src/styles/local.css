@@ -1,3 +1,19 @@
 .bg-image {
-	background-image: url("../../public/keyboards.jpg");
+  background-image: url("/keyboards.jpg");
+}
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-full;
+}
+
+
+.montserrat-normal {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }

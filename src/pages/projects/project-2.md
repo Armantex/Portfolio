@@ -5,7 +5,8 @@ image: {
   src: " ",
   alt: " ",
 }
-urlGithub: /
-description: description
+urlGithub: https://github.com/argonarch/Marko_Polo
+description: Asistente virtual hecho en python
 category: category
+info:
 ---

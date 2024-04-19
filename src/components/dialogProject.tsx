@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -8,20 +7,14 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-
-export function DialogProject() {
+export function DialogProject({ info, program }: { info; program }) {
 	return (
 		<Dialog>
-			<DialogTrigger>Info</DialogTrigger>
+			<DialogTrigger>info</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
-					<DialogTitle>Are you absolutely sure?</DialogTitle>
-					<DialogDescription>
-						This action cannot be undone. This will permanently delete your
-						account and remove your data from our servers.
-					</DialogDescription>
+					<DialogTitle>¿Que es {program}?</DialogTitle>
+					<DialogDescription>{info}</DialogDescription>
 				</DialogHeader>
 			</DialogContent>
 		</Dialog>

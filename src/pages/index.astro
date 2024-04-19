@@ -1,12 +1,12 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
-import lang from "@/lang/es.json";
+import MainHtml from "@/layouts/MainHtml.astro";
+/* import lang from "@/lang/es.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"; */
 ---
 
-<MainLayout title="Portafolio">
+<MainHtml title="Portafolio">
   <section
     id="Name"
     class="flex flex-col h-screen justify-center bg-fixed bg-image bg-no-repeat bg-cover"
@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge";
       <h1 class="mt-4 text-4xl">Programmer</h1>
     </div>
   </section>
+  <!-- 
   <div class="md:container">
     <section id="Skills">
       <h1 class="text-center text-2xl">{lang.skills}:</h1>
@@ -47,4 +48,5 @@ import { Badge } from "@/components/ui/badge";
       </div>
     </section>
   </div>
-</MainLayout>
+  -->
+</MainHtml>

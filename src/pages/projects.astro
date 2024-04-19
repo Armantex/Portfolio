@@ -1,20 +1,24 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro"
-import PostProject from "@/components/postProject.astro"
+import MainHtml from "@/layouts/MainHtml.astro";
+import PostProject from "@/components/postProject.astro";
 const allPosts = await Astro.glob("./projects/*.md");
 ---
-<MainLayout title="Portafolio">
-	<div class="flex flex-col h-screen bg-fixed bg-image bg-no-repeat bg-cover">
-		<div class="text-center text-green-600 mt-32">
-			<h1 class="font-bold text-6xl">Projects</h1>
-			<section class="container mt-20" aria-label="New Blog Posts">
-				<div class="grid grid-cols-4 gap-3">
-				{allPosts.slice(0, 4).map((post) => (
-				<PostProject frontmatter={post.frontmatter} />
-				))}
-				</div>
-			</section>
-		</div>				
-	</div>
-</MainLayout>
 
+<MainHtml title="Portafolio">
+  <div
+    class="flex flex-col h-screen bg-fixed bg-image bg-no-repeat bg-cover justify-center"
+  >
+    <div class="text-center text-blue-400">
+      <h1 class="font-bold text-7xl">Projects</h1>
+      <section class="container mt-24" aria-label="New Blog Posts">
+        <div class="grid grid-cols-4 gap-3">
+          {
+            allPosts
+              .slice(0, 6)
+              .map((post) => <PostProject frontmatter={post.frontmatter} />)
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</MainHtml>
