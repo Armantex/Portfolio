@@ -1,14 +1,13 @@
 ---
 import { siteConfig } from "@/config/site";
 import { Icons } from "./icons";
-
 const sizeIcon = "size-6";
 const hover = "hover:text-slate-400";
-const hoverIcon = "hover:text-slate-400";
 
 import { ModeToggle } from "@/components/ModeToggle";
 
 import { Button } from "@/components/ui/button";
+import { DropMenu } from "./DropMenu";
 ---
 
 <script is:inline>
@@ -36,13 +35,21 @@ import { Button } from "@/components/ui/button";
 </script>
 
 <nav class="backdrop-blur-md bg-black/40 w-screen absolute text-white">
-  <div class="md:container">
-    <div class="flex space-x-2 p-1.5">
-      <div class="flex items-center text-xl font-bold gap-x-3">
+  <div class="sm:container">
+    <div class="flex space-x-2 sm:p-1.5 max-sm:p-1">
+      <div
+        class="flex items-center text-xl font-bold gap-x-3 sm:visible max-sm:collapse"
+      >
         <a href="/" class={hover}> Home </a>
         <a href="/projects" class={hover}> Projects </a>
         <!-- <a href="/contacts" class={hover}> Contacts </a> -->
       </div>
+      <DropMenu
+        sizeIcon={sizeIcon}
+        drop="sm:collapse max-sm:visible"
+        client:load
+      />
+
       <div class="flex grow justify-center"></div>
       <div class="flex gap-x-3">
         <a href={siteConfig.links.github} target="_blank">
