@@ -1,21 +1,31 @@
 ---
-import { Icons } from "./icons";
-const { frontmatter} = Astro.props;
-const { title, description, category, urlGithub } = frontmatter;
+const { frontmatter } = Astro.props;
+const { title, description, category, urlGithub, info } = frontmatter;
+import { DialogProject } from "./DialogProject";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 ---
 
-<article class="flex flex-col bg-red-600">
-  <div class="flex">
-		<a class="badge">{category}</a>
-		<a href={urlGithub}>
-			<Icons.gitHub className="h-6 w-6"/>
-		</a>
-	</div>
-  <a href={urlGithub}>{title}</a>	
-  <div class="content">
-    <p>{description}</p>
-  </div>
-	<div> 
-		more info
-	</div>
+<article class="flex flex-col">
+  <Card>
+    <CardHeader>
+      <CardTitle className="text-xl">{title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <p>{description}</p>
+    </CardContent>
+    <CardFooter>
+      <div class="w-full flex justify-between px-4">
+        <DialogProject info={info} program={title} client:load />
+        <Button><a href={urlGithub} target="_blank">Link</a></Button>
+      </div>
+    </CardFooter>
+  </Card>
 </article>
