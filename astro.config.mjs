@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Armantex.github.io',
-  base: 'Portfolio',
+  site: "https://argonarch.me/",
+  base: "/portfolio",
   integrations: [tailwind(), react()],
 });

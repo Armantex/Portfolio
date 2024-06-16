@@ -28,13 +28,13 @@ export function DropMenu({
         <DropdownMenuContent>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <a href="/" className="size-full">
+            <a href="/portfolio" className="size-full">
               {" "}
               Home{" "}
             </a>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <a href="/projects" className="size-full">
+            <a href="/porfolio/projects" className="size-full">
               {" "}
               Projects{" "}
             </a>

@@ -1,5 +1,5 @@
 .bg-image {
-  background-image: url("/keyboards.jpg");
+  background-image: url("/portfolio/keyboards.jpg");
 }
 
 html {
@@ -9,7 +9,6 @@ html {
 body {
   @apply h-full;
 }
-
 
 .montserrat-normal {
   font-family: "Montserrat", sans-serif;
